@@ -1,0 +1,42 @@
+.nnheader {
+  background: rgba(59, 59, 59, 0.699);
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  width: 100%;
+  box-sizing: border-box;
+  opacity: 1;
+}
+.Link {
+  color: white;
+  text-decoration: none;
+}
+.nnheader .actions {
+  display: inline;
+}
+
+.nnheader .actions li {
+  /* text-align: center; */
+  color: blue;
+  font-size: 1em;
+  padding: 10px;
+  margin: 10px;
+  font-weight: 400;
+  display: inline;
+  border-radius: 15px;
+
+  text-decoration: none;
+  transition: all 500ms;
+  /* background: rgba(0, 0, 0, 0.3); */
+}
+.nnheader .actions li:hover {
+  color: blue;
+  font-size: 1.1em;
+}
+.nnheader .title {
+  /* float: left; */
+  display: inline;
+  color: white;
+  font-size: 1.5em;
+  font-weight: 700;
+}

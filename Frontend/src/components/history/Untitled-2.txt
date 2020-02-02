@@ -1,0 +1,43 @@
+<Segment secondary inverted color="black">
+          <Label
+            color="teal"
+            size="large"
+            ribbon
+            icon="user"
+            style={{ textTransformation: "capitalize" }}
+            content="user"
+          />
+          <Header inverted textAlign="center" as="h1" icon>
+            <Icon name="user" />
+            Muskan
+            <Header.Subheader>muskangoel17@gmail.com</Header.Subheader>
+            {/* <Header.Subheader>{phone}</Header.Subheader> */}
+          </Header>
+        </Segment>
+        <Header as="h2">
+          <icon name="folder open" />
+          Order History
+        </Header>
+        {order.length === 0 ? (
+          <Segment inverted tertiary color="grey" textAlign="center">
+            <Header icon>
+              <Icon name="copy outline" />
+              No past orders.
+            </Header>
+            <div>
+              <Button color="blue">
+                <Link to="/home">
+                  <p style={{ color: "white" }}>View Food</p>{" "}
+                </Link>
+              </Button>
+            </div>
+          </Segment>
+        ) : (
+          <Accordion
+            fluid
+            styled
+            //multiple panels opened at same time
+            exclusive={false}
+            panels={mapOrdersToPanels(order)}
+          />
+        )}
